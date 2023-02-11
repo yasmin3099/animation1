@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.body{
+    perspective: 700px ; 
+   
+}
+.section{
+    transform-style: preserve-3d;
+    
+}
+.container{
+    position: relative;
+    height: 50vh;
+    background-color: blueviolet;
+}
+.hit1 , .hit2 , .hit3{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-left: 14%;
+    margin-top: 50px;
+    background: linear-gradient(rgb(0, 229, 255), rgb(255, 65, 97), yellow);
+    filter: blur(1px);
+    border-radius: 50%;
+    animation-name: ball;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+   /* animation: ball 0.5s linear infinite; */
+
+}
+
+@keyframes ball {
+    0%{
+       transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+.container2{
+    background-color: blueviolet;
+    height: 150vh;
+    position: relative;
+    padding: 20px;
+
+}
+.hit4{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: aqua;
+    animation-name: ball2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+.hit5{
+    margin-top: 25%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: aqua;
+    animation-name: ball2;
+    animation-duration: 3s;
+    animation-delay: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.hit6{
+    margin-top: 50%;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: aqua;
+    animation-name: ball2;
+    animation-duration: 3s;
+    animation-delay: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ball2 {
+    0% { background-color: rgb(0, 229, 255);  left: 0;   }
+    25% { background-color: rgb(0, 132, 255);}
+
+    50% { background-color: rgb(255, 65, 97);  left: 1000px;  }
+
+    75% { background-color: rgb(255, 217, 0);}
+    100% { background-color: yellow;  left: 0; }
+
+}
